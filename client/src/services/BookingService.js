@@ -15,3 +15,11 @@ export const deleteBooking = (id) => {
         method: "DELETE",
     });
 };
+export const updateBooking = (id, payload) => {
+    return fetch(baseURL + id, {
+        method: "UPDATE",
+        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/json" },
+    }).then((res) => res.json()
+    );
+}
