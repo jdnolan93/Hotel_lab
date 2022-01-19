@@ -12,8 +12,10 @@ const BookingForm = ({ addBooking }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    postBooking(formData).then((data) => addBooking(data));
-    setFormData()
+    formData.status = false;
+    postBooking(formData).then((data) => {
+      addBooking(data)
+    });
   }
 
 

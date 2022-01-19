@@ -1,17 +1,17 @@
 import React from 'react';
 import BookingItem from './BookingItem';
 
-const BookingList = ({bookings}) => {
+const BookingList = ({ bookings, removeBooking }) => {
 
   const bookingNodes = bookings.map(booking => {
-    return <BookingItem booking = {booking} key = {booking._id}/>
+    return <BookingItem removeBooking={removeBooking} booking={booking} key={booking._id} />
   })
-  
+
 
   return (
-  <div>
-    {bookingNodes}
-  </div>
+    <div>
+      {bookingNodes}
+    </div>
   );
 };
 
