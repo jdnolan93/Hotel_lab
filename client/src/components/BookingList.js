@@ -1,7 +1,11 @@
 import React from 'react';
 
 const BookingList = () => {
-  return <div></div>;
+  return (
+  <div>
+
+  </div>
+  );
 };
 
 
