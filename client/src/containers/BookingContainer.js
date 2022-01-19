@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import BookingForm from '../components/BookingForm';
 import BookingList from '../components/BookingList';
 import {getBookings} from '../services/BookingService'
 
@@ -13,6 +14,7 @@ const BookingContainer = () => {
 
   return (
   <div>
+    <BookingForm/>
     <BookingList bookings={bookings}/>
   </div>
   );
